@@ -16,6 +16,7 @@ export default function Navbar() {
 
 function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)
+    // this matches to the exact link pathname to prevent going to similar but wrong pages
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
     return (
